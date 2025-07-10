@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlatedPine – Cookies Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define CSS Variables for consistent theming */
+        :root {
+            --primary-color: #F3E9DC; /* Pinewood Beige */
+            --accent-green: #4E944F; /* Forest Pine Green */
+            --accent-gray: #B0A99F; /* Ash Gray */
+            --text-dark: #333;
+            --text-light: #666;
+            --font-sans: 'Nunito', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        /* Basic Body Styling */
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        /* Container for content width */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Styling */
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 2em;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Navigation List Styling */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Main Content Section Styling */
+        main {
+            padding: 60px 0; /* Add some top/bottom padding for content */
+        }
+
+        /* Heading Styles */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            color: var(--accent-green);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text-dark); /* Main policy title */
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--accent-green);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 60px;
+            text-align: center; /* Center section headings */
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: var(--text-dark);
+            margin-top: 40px;
+            text-align: left; /* Align sub-headings to left */
+        }
+
+        h4 {
+            font-size: 1.4em;
+            color: var(--text-dark);
+            margin-top: 30px;
+            text-align: left; /* Align sub-sub-headings to left */
+        }
+
+        /* Paragraph and List Styling */
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Specific styling for the "Last Updated" date */
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        /* Cookie Consent Dialogue Box */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--text-dark);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
+            font-size: 0.95em;
+        }
+
+        .cookie-consent-banner p {
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+            padding-right: 10px;
+        }
+
+        .cookie-consent-banner .cookie-buttons button {
+            background-color: var(--accent-green);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-left: 10px;
+        }
+
+        .cookie-consent-banner .cookie-buttons button:hover {
+            background-color: #3a7a3b;
+            transform: translateY(-1px);
+        }
+
+        .cookie-consent-banner .cookie-buttons button.decline {
+            background-color: var(--accent-gray);
+        }
+
+        .cookie-consent-banner .cookie-buttons button.decline:hover {
+            background-color: #928b84;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--primary-color);
+            padding: 60px 0 30px 0;
+            color: var(--text-dark);
+            font-size: 0.95em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        footer .footer-section {
+            flex: 1 1 200px;
+            min-width: 180px;
+        }
+
+        footer h4 {
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            text-align: left; /* Override global h4 text-align if needed */
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 0; /* Ensure no extra margin from default ul */
+            text-align: left; /* Align footer list items to left */
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--accent-green);
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        footer .bottom-bar {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 10px 15px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+            h4 {
+                font-size: 1.2em;
+            }
+            .cookie-consent-banner {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .cookie-consent-banner p {
+                padding-right: 0;
+                margin-bottom: 10px;
+            }
+            .cookie-consent-banner .cookie-buttons button {
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            footer .footer-section {
+                margin-bottom: 20px;
+            }
+            footer h4 {
+                text-align: center;
+            }
+            footer ul {
+                text-align: center; /* Center footer navigation for mobile */
+            }
+        }
+    </style>
+    <!-- Optional: Font Awesome for social icons. Uncomment if you want to use them. -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">PlatedPine</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>PlatedPine Cookies Policy</h1>
+            <p class="last-updated"><strong>Last Updated: July 9, 2025</strong></p>
+
+            <p>This Cookies Policy explains how PlatedPine ("we," "us," or "our") uses cookies and similar technologies on our website (www.platedpine.com). By continuing to browse or use our website, you are agreeing to our use of cookies in accordance with this policy. We are committed to being transparent about our use of cookies and providing you with control over your preferences.</p>
+
+            <h2>Understanding Cookies: A Detailed Overview</h2>
+            <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the site owners. Cookies enable a website to remember your actions and preferences over a period of time, so you don't have to keep re-entering them whenever you come back to the site or browse from one page to another. They play a crucial role in enhancing your online experience.</p>
+
+            <h3>40 Detailed Points on Cookies and Their Use at PlatedPine</h3>
+            <ol>
+                <li><strong>What is a Cookie?</strong> A cookie is a small data file placed on your device by a website. It stores information about your browsing activities, helping the site remember you and your preferences for future visits.</li>
+                <li><strong>Purpose of Cookies:</strong> Cookies serve various purposes, from enabling basic website functionality to providing personalized content and advertising. They are essential for a smooth and tailored online experience.</li>
+                <li><strong>How PlatedPine Uses Cookies:</strong> We use cookies to enhance your shopping experience, remember your preferences, analyze site traffic, and support our marketing efforts. This helps us serve you better.</li>
+                <li><strong>Consent for Cookies:</strong> By using our website, you consent to the placement of cookies on your device as described in this policy. You have the option to manage or decline certain cookies.</li>
+                <li><strong>Strictly Necessary Cookies:</strong> These cookies are essential for our website to function correctly. They enable core functionalities like secure login, shopping cart management, and payment processing. Without them, basic services cannot be provided.</li>
+                <li><strong>Functionality Cookies:</strong> These cookies allow our website to remember choices you make, such as your language preference, region, or items added to your cart. They enhance personalization and convenience.</li>
+                <li><strong>Performance/Analytical Cookies:</strong> These cookies collect anonymous information about how visitors use our website. They help us understand site traffic, identify popular pages, and improve overall website performance and user experience.</li>
+                <li><strong>Targeting/Advertising Cookies:</strong> These cookies are used to deliver advertisements more relevant to your interests. They track your browsing habits across websites to build a profile of your interests and show you targeted ads.</li>
+                <li><strong>First-Party Cookies:</strong> These are cookies set by the website you are visiting (platedpine.com). They are typically used for essential site functions, remembering your login, or tracking your preferences directly.</li>
+                <li><strong>Third-Party Cookies:</strong> These cookies are set by a domain other than the one you are visiting. They are often used by advertising networks, social media platforms, or analytics providers to track your activity across multiple sites.</li>
+                <li><strong>Session Cookies:</strong> These are temporary cookies that remain on your device only until you close your web browser. They are used for immediate, short-term interactions like keeping you logged in during a single session.</li>
+                <li><strong>Persistent Cookies:</strong> These cookies remain on your device for a set period or until you manually delete them. They are used to remember your preferences or login details for future visits.</li>
+                <li><strong>Cookie Management:</strong> You have control over cookies. Most web browsers allow you to manage your cookie preferences through their settings, enabling you to accept, decline, or delete cookies.</li>
+                <li><strong>Browser Settings:</strong> You can configure your browser to notify you when you receive a cookie, giving you the chance to decide whether to accept it. You can also set your browser to refuse all cookies.</li>
+                <li><strong>Impact of Declining Cookies:</strong> Declining certain cookies, especially strictly necessary ones, may impact the functionality and usability of our website. Some features may not work correctly.</li>
+                <li><strong>Web Beacons/Pixels:</strong> These are tiny graphics with a unique identifier, similar in function to cookies, used to track the online movements of web users. They help us count users who have visited certain pages.</li>
+                <li><strong>Local Storage:</strong> Similar to cookies, local storage allows websites to store data directly in your browser. Unlike cookies, this data is not sent to the server with every request and has a larger storage capacity.</li>
+                <li><strong>PlatedPine's Use of Analytics:</strong> We use analytical cookies (e.g., Google Analytics) to gather data on website usage, helping us understand user behavior and improve our site's content and design.</li>
+                <li><strong>Marketing Personalization:</strong> Targeting cookies help us personalize the marketing messages you see, both on our site and on other platforms, ensuring they are relevant to your interests in furniture.</li>
+                <li><strong>Shopping Cart Functionality:</strong> Cookies are crucial for remembering items you've added to your shopping cart as you navigate through our website, ensuring a seamless checkout process.</li>
+                <li><strong>Login Persistence:</strong> If you choose "Remember Me," a persistent cookie allows you to stay logged into your PlatedPine account across multiple sessions, saving you time.</li>
+                <li><strong>Language Preferences:</strong> Functionality cookies remember your preferred language settings, so our website displays in your chosen language on subsequent visits.</li>
+                <li><strong>Security Cookies:</strong> We use security cookies for authentication purposes and to protect user data from unauthorized parties, contributing to a secure browsing environment.</li>
+                <li><strong>Fraud Prevention:</strong> Certain cookies help us detect and prevent fraudulent activities on our website, safeguarding both our business and your transactions.</li>
+                <li><strong>Customer Support Integration:</strong> Cookies may be used by third-party customer support tools integrated into our site (e.g., live chat) to maintain your session and conversation history.</li>
+                <li><strong>A/B Testing:</strong> We may use cookies to conduct A/B tests, showing different versions of a page to different users to determine which performs better in terms of engagement or conversions.</li>
+                <li><strong>Referral Tracking:</strong> Cookies help us track which websites referred you to PlatedPine, allowing us to understand our marketing channels' effectiveness.</li>
+                <li><strong>Device Recognition:</strong> Cookies can help us recognize your device when you return to our site, optimizing the display and functionality for your specific screen size and browser.</li>
+                <li><strong>Opt-out Mechanisms:</strong> Many advertising networks offer opt-out mechanisms for targeted advertising. You can often find these through industry-specific websites.</li>
+                <li><strong>Browser-Specific Controls:</strong> The exact steps to manage cookies vary by browser (Chrome, Firefox, Safari, Edge, etc.). Consult your browser's help menu for detailed instructions.</li>
+                <li><strong>Cookie Consent Banners:</strong> Our website displays a cookie consent banner upon your first visit, providing you with information and options to accept or decline cookies.</li>
+                <li><strong>Cookie Policy Updates:</strong> We may update this Cookies Policy periodically to reflect changes in our practices or legal requirements. We will notify you of significant changes.</li>
+                <li><strong>Data Anonymization:</strong> Where possible, we anonymize or aggregate data collected through cookies to protect your privacy while still allowing us to perform analysis.</li>
+                <li><strong>Third-Party Analytics Providers:</strong> We use reputable third-party analytics providers who adhere to strict data protection standards to process cookie data on our behalf.</li>
+                <li><strong>Social Media Integration:</strong> Cookies from social media platforms (e.g., Facebook, Instagram) may be placed on your device if you interact with our social sharing buttons or embedded content.</li>
+                <li><strong>Cross-Device Tracking:</strong> Some third-party cookies may enable cross-device tracking, allowing advertisers to show you relevant ads across different devices you use.</li>
+                <li><strong>Pixel Tags:</strong> Also known as clear GIFs, pixel tags are small blocks of code on webpages that allow websites to read and place cookies, and collect information about your visit.</li>
+                <li><strong>E-commerce Tracking:</strong> Cookies are fundamental to e-commerce, tracking products viewed, items added to cart, and purchase completions to analyze sales funnels.</li>
+                <li><strong>User Experience Improvement:</strong> By analyzing cookie data, we gain insights into how users navigate our site, enabling us to continuously improve the user interface and overall experience.</li>
+                <li><strong>Contact for Cookie Concerns:</strong> If you have any questions or concerns about our use of cookies, please refer to the "Contact Us" section of this policy for our contact details.</li>
+            </ol>
+
+            <h2>Changes to This Cookies Policy</h2>
+            <p>We may update this Cookies Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will revise the "Last Updated" date at the top of this policy. If we make significant changes, we will notify you by posting a prominent notice on our website or by sending you an email (if you have provided us with your email address and opted-in to receive such notifications) prior to the changes becoming effective. We encourage you to review this Cookies Policy periodically to stay informed about how we are using cookies.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Cookies Policy or our use of cookies, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:privacy@platedpine.com" style="color: var(--accent-green); text-decoration: none;">privacy@platedpine.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+919876543210" style="color: var(--accent-green); text-decoration: none;">+91 98765 43210</a> (Customer Service)</li>
+                <li><strong>Postal Address:</strong><br>
+                PlatedPine Furniture Headquarters<br>
+                Attn: Privacy Officer<br>
+                123 Pinecrest Avenue,<br>
+                Greenwood City,<br>
+                Delhi, Delhi, 110001<br>
+                India</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="cookies.html">Cookies Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Address</h4>
+                <p>PlatedPine Furniture Headquarters</p>
+                <p>123 Pinecrest Avenue,</p>
+                <p>Greenwood City,</p>
+                <p>Delhi, Delhi, 110001</p>
+                <p>India</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@platedpine.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>WhatsApp: +91 98765 43210</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <!-- Placeholder social icons. Uncomment Font Awesome link in head to display. -->
+                    <!-- <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+                    <!-- <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                    <!-- <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a> -->
+                    <!-- <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025 PlatedPine. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <p>This website uses cookies to ensure you get the best experience on our website. By clicking "Accept All", you consent to the use of all cookies. For more details, please review our <a href="cookies.html" style="color: #fff; text-decoration: underline;">Cookies Policy</a>.</p>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()">Accept All</button>
+            <button onclick="declineCookies()" class="decline">Decline All</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for(let i=0;i < ca.length;i++) {
+                let c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        // Function to check cookie consent status
+        function checkCookieConsent() {
+            let consent = getCookie("platedpine_cookie_consent");
+            let banner = document.getElementById("cookieConsentBanner");
+            if (consent === "accepted" || consent === "declined") {
+                banner.style.display = "none"; // Hide banner if consent already given
+            } else {
+                banner.style.display = "flex"; // Show banner if no consent yet
+            }
+        }
+
+        // Function to accept cookies
+        function acceptCookies() {
+            setCookie("platedpine_cookie_consent", "accepted", 365); // Store consent for 1 year
+            document.getElementById("cookieConsentBanner").style.display = "none";
+            // Here you would typically load analytics scripts or other cookie-dependent features
+            console.log("Cookies accepted.");
+        }
+
+        // Function to decline cookies
+        function declineCookies() {
+            setCookie("platedpine_cookie_consent", "declined", 365); // Store decline for 1 year
+            document.getElementById("cookieConsentBanner").style.display = "none";
+            // Here you would typically disable analytics scripts or other cookie-dependent features
+            console.log("Cookies declined.");
+        }
+
+        // Check consent status when the page loads
+        window.onload = checkCookieConsent;
+    </script>
+</body>
+</html>

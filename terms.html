@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlatedPine – Terms & Conditions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define CSS Variables for consistent theming */
+        :root {
+            --primary-color: #F3E9DC; /* Pinewood Beige */
+            --accent-green: #4E944F; /* Forest Pine Green */
+            --accent-gray: #B0A99F; /* Ash Gray */
+            --text-dark: #333;
+            --text-light: #666;
+            --font-sans: 'Nunito', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        /* Basic Body Styling */
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        /* Container for content width */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Styling */
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 2em;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Navigation List Styling */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Main Content Section Styling */
+        main {
+            padding: 60px 0; /* Add some top/bottom padding for content */
+        }
+
+        /* Heading Styles */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            color: var(--accent-green);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text-dark); /* Main policy title */
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--accent-green);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 60px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: var(--text-dark);
+            margin-top: 40px;
+        }
+
+        h4 {
+            font-size: 1.4em;
+            color: var(--text-dark);
+            margin-top: 30px;
+        }
+
+        /* Paragraph and List Styling */
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Specific styling for the "Last Updated" date */
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--primary-color);
+            padding: 60px 0 30px 0;
+            color: var(--text-dark);
+            font-size: 0.95em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        footer .footer-section {
+            flex: 1 1 200px;
+            min-width: 180px;
+        }
+
+        footer h4 {
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            text-align: left; /* Override global h4 text-align if needed */
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 0; /* Ensure no extra margin from default ul */
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--accent-green);
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        footer .bottom-bar {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 10px 15px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+            h4 {
+                font-size: 1.2em;
+            }
+            footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            footer .footer-section {
+                margin-bottom: 20px;
+            }
+            footer h4 {
+                text-align: center;
+            }
+        }
+    </style>
+    <!-- Optional: Font Awesome for social icons. Uncomment if you want to use them. -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">PlatedPine</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>PlatedPine Terms & Conditions</h1>
+            <p class="last-updated"><strong>Last Updated: July 9, 2025</strong></p>
+
+            <p>Welcome to PlatedPine! These Terms & Conditions ("Terms") govern your access to and use of the PlatedPine website (www.platedpine.com) and all related services, products, content, and applications (collectively, the "Service"). Please read these Terms carefully before using our Service. By accessing or using any part of the Service, you agree to be bound by these Terms. If you do not agree to all the terms and conditions of this agreement, then you may not access the Service or use any services. Your continued use of the Service constitutes your acceptance of these Terms.</p>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By using the PlatedPine Service, you affirm that you are of legal age to enter into this agreement and that you have read, understood, and agree to be bound by these Terms. If you are using the Service on behalf of an entity, you represent and warrant that you have the authority to bind that entity to these Terms, and "you" and "your" in these Terms refer to that entity. These Terms apply to all visitors, users, and others who access or use the Service.</p>
+
+            <h2>2. Changes to Terms</h2>
+            <p>PlatedPine reserves the right, at its sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+
+            <h2>3. Privacy Policy</h2>
+            <p>Your use of the Service is also governed by our Privacy Policy, which is incorporated into these Terms by this reference. Please review our <a href="privacy.html">Privacy Policy</a> to understand our practices regarding the collection, use, and disclosure of your personal information.</p>
+
+            <h2>4. Account Registration and Security</h2>
+            <h3>4.1. Account Creation</h3>
+            <p>To access certain features of the Service, you may be required to register for an account. When you register, you agree to provide accurate, current, and complete information as prompted by the registration form. You agree to maintain and promptly update your account information to keep it accurate, current, and complete.</p>
+
+            <h3>4.2. Account Security</h3>
+            <p>You are responsible for maintaining the confidentiality of your account password and for all activities that occur under your account. You agree to notify PlatedPine immediately of any unauthorized use of your account or any other breach of security. PlatedPine will not be liable for any loss or damage arising from your failure to comply with this security obligation.</p>
+
+            <h3>4.3. Prohibited Uses</h3>
+            <p>You may not use the Service for any illegal or unauthorized purpose. You must not, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws).</p>
+
+            <h2>5. Product Information and Orders</h2>
+            <h3>5.1. Product Descriptions</h3>
+            <p>PlatedPine strives to be as accurate as possible in the description of our products. However, we do not warrant that product descriptions or other content of the Service is accurate, complete, reliable, current, or error-free. Natural wood products, including pine, inherently exhibit variations in grain, color, and texture; such variations are not considered defects. Product images on the website are for illustrative purposes only and may differ slightly from the actual product due to screen settings, lighting, and natural material variations.</p>
+
+            <h3>5.2. Pricing and Availability</h3>
+            <p>All prices displayed on the Service are in Indian Rupees (INR) unless otherwise specified and are subject to change without notice. We reserve the right to modify or discontinue products at any time without prior notice. While we strive to ensure accurate pricing, errors may occur. In the event of a pricing error, PlatedPine reserves the right to cancel any orders placed at the incorrect price, even if the order has been confirmed and your credit card charged. If your credit card has already been charged for the purchase and your order is cancelled, PlatedPine will issue a credit to your credit card account in the amount of the incorrect price.</p>
+
+            <h3>5.3. Order Acceptance</h3>
+            <p>Your receipt of an electronic or other form of order confirmation does not signify our acceptance of your order, nor does it constitute confirmation of our offer to sell. PlatedPine reserves the right at any time after receipt of your order to accept or decline your order for any reason. We may require additional verifications or information before accepting any order.</p>
+
+            <h3>5.4. Custom Orders</h3>
+            <p>For "Made-to-Order" products, specific terms regarding dimensions, finishes, and customization details will be confirmed during the order process. Once a custom order is confirmed, it may not be cancelled or altered, and is generally non-refundable, unless there is a manufacturing defect or significant deviation from the agreed-upon specifications.</p>
+
+            <h2>6. Payment Terms</h2>
+            <p>All payments for products purchased through the Service must be made through the payment methods offered on our website. You represent and warrant that you are the authorized user of the payment method. You agree to pay all charges incurred by you or any users of your account and credit card (or other applicable payment mechanism) at the prices in effect when such charges are incurred. PlatedPine uses third-party payment processors; your payment information is handled directly by these secure processors and is not stored on our servers.</p>
+
+            <h2>7. Shipping and Delivery</h2>
+            <p>Shipping and delivery terms, including estimated delivery times and costs, will be provided at the time of purchase. Delivery dates are estimates only and are not guaranteed. PlatedPine is not responsible for delays caused by shipping carriers, customs, or other factors beyond our reasonable control. Risk of loss and title for items purchased from PlatedPine pass to you upon our delivery to the carrier.</p>
+
+            <h2>8. Returns, Refunds, and Warranty</h2>
+            <h3>8.1. Returns and Refunds</h3>
+            <p>Our return and refund policy is detailed on our website. Generally, standard products may be returned within a specified period (e.g., 14 days) from delivery, provided they are in new, unused condition and in their original packaging. Custom-made products are typically non-returnable and non-refundable unless there is a manufacturing defect. Shipping costs for returns are generally the responsibility of the customer.</p>
+
+            <h3>8.2. Warranty</h3>
+            <p>PlatedPine offers a 10-year structural warranty on all our furniture, covering defects in materials and workmanship under normal household use. This warranty does not cover normal wear and tear, damage caused by improper assembly or maintenance, misuse, accidents, or natural variations in wood. For full details, please refer to our Furniture Care Guarantee section on the website or contact customer support.</p>
+
+            <h2>9. Intellectual Property</h2>
+            <p>All content included on the Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of PlatedPine or its content suppliers and protected by international copyright laws. The compilation of all content on this Service is the exclusive property of PlatedPine and protected by international copyright laws. All software used on this Service is the property of PlatedPine or its software suppliers and protected by international copyright laws.</p>
+            <p>The PlatedPine name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of PlatedPine or its affiliates or licensors. You must not use such marks without the prior written permission of PlatedPine.</p>
+
+            <h2>10. User Conduct</h2>
+            <h3>10.1. Prohibited Activities</h3>
+            <p>You agree not to engage in any of the following prohibited activities:</p>
+            <ol>
+                <li>Using the Service for any illegal purpose or in violation of any local, state, national, or international law.</li>
+                <li>Violating or encouraging others to violate the rights of third parties, including intellectual property rights.</li>
+                <li>Posting, uploading, or distributing any content that is unlawful, defamatory, libelous, inaccurate, or that a reasonable person could deem to be objectionable, profane, indecent, pornographic, harassing, threatening, embarrassing, hateful, or otherwise inappropriate.</li>
+                <li>Interfering with security-related features of the Service, including by: (a) disabling or circumventing features that prevent or limit use or copying of any content; or (b) reverse engineering or otherwise attempting to discover the source code of the Service or any part thereof except to the extent that such activity is expressly permitted by applicable law.</li>
+                <li>Interfering with the operation of the Service or any user’s enjoyment of the Service, including by: (a) uploading or otherwise disseminating viruses, adware, spyware, worms, or other malicious code; (b) making unsolicited offers or advertisements to other users of the Service; (c) attempting to collect personal information about users or third parties without their consent; or (d) interfering with or disrupting any networks, equipment, or servers connected to or used to provide the Service, or violating the regulations, policies, or procedures of such networks, equipment, or servers.</li>
+                <li>Performing any fraudulent activity including impersonating any person or entity, claiming false affiliations, accessing the Service accounts of others without permission, or falsifying your age or date of birth.</li>
+                <li>Selling or otherwise transferring the access granted herein or any Materials (as defined in Section 11) or any right or ability to view, access, or use any Materials.</li>
+            </ol>
+
+            <h3>10.2. User-Generated Content</h3>
+            <p>If the Service allows you to post, upload, publish, submit or transmit content (e.g., reviews, gallery submissions), you retain ownership of any intellectual property rights that you hold in that content. However, by making any content available on or through the Service, you grant to PlatedPine a worldwide, irrevocable, perpetual, non-exclusive, transferable, royalty-free license, with the right to sublicense, to use, copy, modify, create derivative works of, distribute, publicly display, publicly perform, and otherwise exploit in any manner such content in all formats and distribution channels now known or hereafter devised (including in connection with the Service and PlatedPine’s business and on third-party sites and services), without further notice to or consent from you, and without requirement of payment to you or any other person or entity.</p>
+            <p>You represent and warrant that: (i) you are either the sole and exclusive owner of all content that you make available through the Service or you have all rights, licenses, consents and releases that are necessary to grant to PlatedPine the rights in such content, as contemplated under these Terms; and (ii) neither the content nor your posting, uploading, publication, submission or transmittal of the content or PlatedPine’s use of the content (or any portion thereof) on, through or by means of the Service will infringe, misappropriate or violate a third party’s patent, copyright, trademark, trade secret, moral rights or other proprietary or intellectual property rights, or rights of publicity or privacy, or result in the violation of any applicable law or regulation.</p>
+
+            <h2>11. Third-Party Links and Services</h2>
+            <p>The Service may contain links to third-party websites or services that are not owned or controlled by PlatedPine. PlatedPine has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that PlatedPine shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such websites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit.</p>
+
+            <h2>12. Disclaimer of Warranties</h2>
+            <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. PlatedPine makes no representations or warranties of any kind, express or implied, as to the operation of the Service or the information, content, materials, or products included on the Service. You expressly agree that your use of the Service is at your sole risk. To the full extent permissible by applicable law, PlatedPine disclaims all warranties, express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose. PlatedPine does not warrant that the Service, its servers, or e-mail sent from PlatedPine are free of viruses or other harmful components. PlatedPine will not be liable for any damages of any kind arising from the use of the Service, including, but not limited to direct, indirect, incidental, punitive, and consequential damages.</p>
+
+            <h2>13. Limitation of Liability</h2>
+            <p>In no event shall PlatedPine, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+
+            <h2>14. Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless PlatedPine and its licensee and licensors, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Service, by you or any person using your account and password; b) a breach of these Terms; or c) content posted on the Service.</p>
+
+            <h2>15. Governing Law and Jurisdiction</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions. Any dispute arising out of or in connection with these Terms, including any question regarding their existence, validity or termination, shall be referred to and finally resolved by arbitration in Delhi, India, in accordance with the provisions of the Arbitration and Conciliation Act, 1996, or any statutory modification or re-enactment thereof for the time being in force. The language of the arbitration shall be English.</p>
+            <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>
+
+            <h2>16. Termination</h2>
+            <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service or contact us to request account deletion.</p>
+
+            <h2>17. Force Majeure</h2>
+            <p>PlatedPine shall not be liable for any failure or delay in performance under these Terms due to causes beyond its reasonable control, including, but not limited to, acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or shortages of transportation facilities, fuel, energy, labor, or materials.</p>
+
+            <h2>18. Entire Agreement</h2>
+            <p>These Terms, together with the Privacy Policy, Cookies Policy, and any other legal notices published by PlatedPine on the Service, shall constitute the entire agreement between you and PlatedPine concerning the Service. No waiver of any term of these Terms shall be deemed a further or continuing waiver of such term or any other term, and PlatedPine’s failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+
+            <h2>19. Contact Information</h2>
+            <p>If you have any questions about these Terms, please contact us:</p>
+            <p><strong>Email:</strong> legal@platedpine.com</p>
+            <p><strong>Phone:</strong> +91 98765 43210 (Customer Service)</p>
+            <p><strong>Postal Address:</strong><br>
+            PlatedPine Furniture Headquarters<br>
+            Attn: Legal Department<br>
+            123 Pinecrest Avenue,<br>
+            Greenwood City,<br>
+            Delhi, Delhi, 110001<br>
+            India</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="cookies.html">Cookies Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Address</h4>
+                <p>PlatedPine Furniture Headquarters</p>
+                <p>123 Pinecrest Avenue,</p>
+                <p>Greenwood City,</p>
+                <p>Delhi, Delhi, 110001</p>
+                <p>India</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@platedpine.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>WhatsApp: +91 98765 43210</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <!-- Placeholder social icons. Uncomment Font Awesome link in head to display. -->
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025 PlatedPine. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

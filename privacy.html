@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlatedPine – Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define CSS Variables for consistent theming */
+        :root {
+            --primary-color: #F3E9DC; /* Pinewood Beige */
+            --accent-green: #4E944F; /* Forest Pine Green */
+            --accent-gray: #B0A99F; /* Ash Gray */
+            --text-dark: #333;
+            --text-light: #666;
+            --font-sans: 'Nunito', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        /* Basic Body Styling */
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        /* Container for content width */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Styling */
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 2em;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Navigation List Styling */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Main Content Section Styling */
+        main {
+            padding: 60px 0; /* Add some top/bottom padding for content */
+        }
+
+        /* Heading Styles */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            color: var(--accent-green);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text-dark); /* Main policy title */
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--accent-green);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 60px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: var(--text-dark);
+            margin-top: 40px;
+        }
+
+        h4 {
+            font-size: 1.4em;
+            color: var(--text-dark);
+            margin-top: 30px;
+        }
+
+        /* Paragraph and List Styling */
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Specific styling for the "Last Updated" date */
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--primary-color);
+            padding: 60px 0 30px 0;
+            color: var(--text-dark);
+            font-size: 0.95em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        footer .footer-section {
+            flex: 1 1 200px;
+            min-width: 180px;
+        }
+
+        footer h4 {
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            text-align: left; /* Override global h4 text-align if needed */
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 0; /* Ensure no extra margin from default ul */
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--accent-green);
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        footer .bottom-bar {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 10px 15px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+            h4 {
+                font-size: 1.2em;
+            }
+            footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            footer .footer-section {
+                margin-bottom: 20px;
+            }
+            footer h4 {
+                text-align: center;
+            }
+        }
+    </style>
+    <!-- Optional: Font Awesome for social icons. Uncomment if you want to use them. -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">PlatedPine</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>PlatedPine Privacy Policy</h1>
+            <p class="last-updated"><strong>Last Updated: July 9, 2025</strong></p>
+
+            <p>At PlatedPine, we are deeply committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how PlatedPine ("we," "us," or "our") collects, uses, shares, and protects the information we gather from you when you visit our website, make a purchase, interact with our services, or communicate with us. We understand the importance of transparency and aim to provide you with a clear understanding of our practices. By accessing or using our website and services, you agree to the terms of this Privacy Policy.</p>
+
+            <h2>1. Introduction to Our Commitment to Your Privacy</h2>
+            <p>Your trust is paramount to us. In an increasingly digital world, the privacy of your personal data has never been more critical. PlatedPine is not just about crafting beautiful, sustainable furniture; it's also about building a relationship with our customers based on respect and integrity. This Privacy Policy is designed to inform you about our data handling practices in a comprehensive manner, detailing what information we collect, why we collect it, how it is used, and the measures we take to safeguard it. We encourage you to read this policy carefully to understand our approach to your privacy. We regularly review and update our privacy practices to ensure compliance with applicable data protection laws and to reflect changes in our operations.</p>
+
+            <h2>2. Information We Collect</h2>
+            <p>We collect various types of information to provide and improve our services, process your orders, and enhance your overall experience with PlatedPine. The information we collect can be broadly categorized into two types: information you provide to us directly, and information we collect automatically.</p>
+
+            <h3>2.1. Information You Provide Directly</h3>
+            <p>When you interact with us, you may provide us with personal information directly. This includes, but is not limited to:</p>
+            <ul>
+                <li><strong>Account Information:</strong> When you create an account on our website, we collect your name, email address, password, and sometimes your phone number. This information is essential for managing your account, facilitating future purchases, and providing a personalized shopping experience.</li>
+                <li><strong>Order Information:</strong> When you make a purchase, we collect details necessary to process your order, including your full name, shipping address, billing address, phone number, email address, and payment information (such as credit card details or other payment method information). Please note that we do not store full credit card numbers on our servers; these are processed securely by third-party payment gateways compliant with industry standards (e.g., PCI DSS).</li>
+                <li><strong>Communication Information:</strong> If you contact us via email, phone, live chat (including WhatsApp support), or social media, we collect the content of your communications, your contact details, and any information you choose to provide. This helps us to respond to your inquiries, provide customer support, and improve our service quality.</li>
+                <li><strong>Customization Details:</strong> When you use our "Made-to-Order" service or "Custom Name Engraving," you provide specific details about your preferences, dimensions, finishes, and text for engraving. This information is crucial for fulfilling your custom order accurately.</li>
+                <li><strong>Marketing Preferences:</strong> If you subscribe to our newsletter or marketing communications, we collect your email address and any preferences you indicate regarding the types of content you wish to receive.</li>
+                <li><strong>Survey and Feedback Information:</strong> From time to time, we may invite you to participate in surveys or provide feedback on our products and services. Any information you provide in these instances is collected to help us understand your needs and improve our offerings.</li>
+                <li><strong>User-Generated Content:</strong> If you submit reviews, testimonials, or photos for our "Gallery: Styled by PlatedPine" section, we collect the content you provide, along with your name or username.</li>
+            </ul>
+
+            <h3>2.2. Information We Collect Automatically</h3>
+            <p>As you navigate and interact with our website, we may automatically collect certain information about your device, browsing actions, and patterns. This data helps us understand how our website is used, optimize its performance, and personalize your experience.</p>
+            <ul>
+                <li><strong>Device Information:</strong> We collect information about the device you use to access our website, including your IP address, browser type, operating system, unique device identifiers, and mobile network information. This helps us ensure compatibility and optimize our site for various devices.</li>
+                <li><strong>Usage Data:</strong> We gather data on your browsing activities, such as the pages you view, the products you browse, the time spent on certain pages, clickstream data, referral sources, and search queries. This information is crucial for analyzing website traffic, identifying popular products, and improving navigation.</li>
+                <li><strong>Location Information:</strong> In some cases, we may infer your approximate geographical location from your IP address. This helps us to tailor content, pricing, and shipping options relevant to your region.</li>
+                <li><strong>Cookies and Similar Technologies:</strong> We use cookies, web beacons, and other tracking technologies to collect information about your interactions with our website. Cookies are small data files stored on your device that allow us to remember your preferences, keep you logged in, track items in your shopping cart, and analyze website usage. For more detailed information on how we use cookies, please refer to our dedicated Cookies Policy.</li>
+            </ul>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>The information we collect is used for various purposes, primarily to operate our business, provide our services, and enhance your experience. Each use case is carefully considered to ensure it aligns with our commitment to your privacy.</p>
+
+            <h3>3.1. To Provide and Manage Our Services</h3>
+            <ul>
+                <li><strong>Order Processing and Fulfillment:</strong> We use your personal information to process your purchases, confirm your orders, manage payments, and arrange for the delivery of your furniture. This includes using your shipping details for logistics and your contact information for delivery updates.</li>
+                <li><strong>Account Management:</strong> Your account information is used to manage your user account, allow you to log in securely, track your order history, and save your preferences for a more efficient shopping experience.</li>
+                <li><strong>Customer Support:</strong> We use your communication information to respond to your inquiries, resolve issues, provide technical support, and address any concerns you may have regarding our products or services.</li>
+                <li><strong>Customization and Manufacturing:</strong> Details provided for "Made-to-Order" pieces and "Custom Name Engraving" are directly used by our artisans and manufacturing partners to create your bespoke furniture exactly to your specifications.</li>
+                <li><strong>Website Functionality:</strong> Automatically collected data helps us ensure our website functions correctly, troubleshoot technical issues, and optimize page loading times and responsiveness.</li>
+            </ul>
+
+            <h3>3.2. To Improve and Personalize Your Experience</h3>
+            <ul>
+                <li><strong>Product Development and Enhancement:</strong> We analyze usage data and feedback to understand customer preferences, identify trends, and inform the development of new products and features. This helps us continually refine our furniture collections to meet evolving needs.</li>
+                <li><strong>Personalization:</strong> We use your browsing history and preferences to personalize your experience on our website, showing you products, promotions, and content that are most relevant to your interests. For example, if you frequently browse coffee tables, we might highlight new coffee table designs or related accessories.</li>
+                <li><strong>Room Visualizer and Finish Preview:</strong> While these tools allow you to upload your own room photos, any data processed by these tools is typically for real-time visualization on your device and is not permanently stored or used for other purposes unless explicitly consented to for features like saving designs.</li>
+            </ul>
+
+            <h3>3.3. For Marketing and Communication</h3>
+            <ul>
+                <li><strong>Promotional Communications:</strong> With your consent (where required by law), we use your contact information to send you marketing communications, newsletters, and promotional offers about PlatedPine products, sales, and events. You can opt-out of these communications at any time.</li>
+                <li><strong>Targeted Advertising:</strong> We may use aggregated and anonymized data, or data collected through cookies, to deliver targeted advertisements on third-party platforms (e.g., social media, ad networks) that we believe may be of interest to you. This helps us reach potential customers more effectively.</li>
+                <li><strong>Customer Engagement:</strong> We may use your information to engage with you on social media platforms, respond to comments, and participate in online discussions related to our brand.</li>
+            </ul>
+
+            <h3>3.4. For Security and Legal Compliance</h3>
+            <ul>
+                <li><strong>Fraud Prevention and Security:</strong> We use collected information to detect and prevent fraudulent transactions, unauthorized access to our systems, and other illegal activities. This includes monitoring for suspicious activity and verifying user identities.</li>
+                <li><strong>Legal Compliance:</strong> We may use and disclose your information as required by law, such as to comply with a subpoena or other legal process, or when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.</li>
+                <li><strong>Enforcement of Terms:</strong> We use information to enforce our Terms and Conditions, including billing and collection processes.</li>
+            </ul>
+
+            <h2>4. How We Share Your Information</h2>
+            <p>We understand that sharing your personal information requires trust. PlatedPine does not sell your personal information to third parties. We only share your information with trusted partners and service providers when necessary to operate our business, provide our services, or comply with legal obligations.</p>
+
+            <h3>4.1. Service Providers</h3>
+            <p>We engage various third-party service providers to perform functions on our behalf, such as:</p>
+            <ul>
+                <li><strong>Payment Processors:</strong> To securely handle your payment transactions. These providers are PCI DSS compliant.</li>
+                <li><strong>Shipping and Logistics Partners:</strong> To deliver your furniture to your specified address. They receive your name, address, and contact number.</li>
+                <li><strong>Customer Support Platforms:</strong> To manage our customer inquiries and communications (e.g., email service providers, live chat software).</li>
+                <li><strong>Marketing and Advertising Partners:</strong> To assist us with marketing campaigns, analytics, and targeted advertising. This may involve sharing anonymized or aggregated data, or using cookies for tracking purposes.</li>
+                <li><strong>IT and Cloud Hosting Services:</strong> To host our website, store data, and ensure the security and functionality of our online operations.</li>
+            </ul>
+            <p>These service providers are contractually obligated to protect your information and are only permitted to use it for the specific purposes for which we disclose it to them.</p>
+
+            <h3>4.2. Business Transfers</h3>
+            <p>In the event that PlatedPine is involved in a merger, acquisition, reorganization, bankruptcy, or sale of all or a portion of its assets, your information may be transferred as part of that transaction. We will notify you via email and/or a prominent notice on our website of any such change in ownership or control of your personal information.</p>
+
+            <h3>4.3. Legal Requirements and Law Enforcement</h3>
+            <p>We may disclose your information if required to do so by law or in the good faith belief that such action is necessary to:</p>
+            <ul>
+                <li>Comply with a legal obligation (e.g., subpoena, court order).</li>
+                <li>Protect and defend the rights or property of PlatedPine.</li>
+                <li>Prevent or investigate possible wrongdoing in connection with the Service.</li>
+                <li>Protect the personal safety of users of the Service or the public.</li>
+                <li>Protect against legal liability.</li>
+            </ul>
+
+            <h3>4.4. With Your Consent</h3>
+            <p>We may share your information with third parties for any purpose where you have given us explicit consent to do so. For example, if you choose to participate in a joint promotion with a partner company, we may share your information as described in that specific promotion.</p>
+
+            <h2>5. Data Security</h2>
+            <p>The security of your personal information is a top priority for PlatedPine. We implement a robust set of technical, administrative, and physical safeguards designed to protect your data from unauthorized access, use, disclosure, alteration, or destruction.</p>
+            <ul>
+                <li><strong>Encryption:</strong> We use Secure Socket Layer (SSL) technology to encrypt data during transmission between your browser and our servers, particularly for sensitive information like payment details.</li>
+                <li><strong>Access Controls:</strong> Access to your personal information is restricted to authorized employees, contractors, and agents who need to know that information to process it for us, and who are subject to strict contractual confidentiality obligations.</li>
+                <li><strong>Regular Security Audits:</strong> We conduct regular security audits and vulnerability assessments to identify and address potential weaknesses in our systems.</li>
+                <li><strong>Data Minimization:</strong> We only collect and retain personal information that is necessary for the purposes outlined in this Privacy Policy.</li>
+                <li><strong>Employee Training:</strong> Our employees receive regular training on data privacy and security best practices to ensure they understand their responsibilities in protecting your information.</li>
+                <li><strong>Third-Party Security:</strong> We carefully vet our third-party service providers to ensure they also maintain high standards of data security and compliance.</li>
+            </ul>
+            <p>Despite our best efforts, no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. We encourage you to also take steps to protect your personal information, such as using strong, unique passwords and being cautious about sharing personal details online.</p>
+
+            <h2>6. Data Retention</h2>
+            <p>We retain your personal information for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements. The specific retention period will vary depending on the type of data and the purpose for which it was collected.</p>
+            <p>For example:</p>
+            <ul>
+                <li><strong>Account Information:</strong> We retain your account information for as long as your account remains active. If you close your account, we may retain certain data for a limited period to comply with legal obligations, resolve disputes, or enforce our agreements.</li>
+                <li><strong>Order Information:</strong> We retain order information for a period necessary to fulfill the order, process returns, handle warranty claims (e.g., 10-year structural warranty), and for tax and accounting purposes.</li>
+                <li><strong>Marketing Preferences:</strong> We retain your marketing preferences until you opt-out or unsubscribe from our communications.</li>
+                <li><strong>Usage Data:</strong> Automatically collected usage data is typically retained for a shorter period, unless it is aggregated or anonymized for analytical purposes, in which case it may be retained indefinitely.</li>
+            </ul>
+            <p>Once the retention period expires, we securely delete or anonymize your personal information.</p>
+
+            <h2>7. Your Data Protection Rights</h2>
+            <p>Depending on your location and applicable data protection laws (such as GDPR for European Union residents or CCPA for California residents), you may have certain rights regarding your personal information. PlatedPine is committed to facilitating the exercise of these rights.</p>
+            <ul>
+                <li><strong>Right to Access:</strong> You have the right to request a copy of the personal information we hold about you.</li>
+                <li><strong>Right to Rectification:</strong> You have the right to request that we correct any inaccurate or incomplete personal information we hold about you.</li>
+                <li><strong>Right to Erasure (Right to be Forgotten):</strong> You have the right to request the deletion of your personal information under certain circumstances, such as when the data is no longer necessary for the purposes for which it was collected.</li>
+                <li><strong>Right to Restrict Processing:</strong> You have the right to request that we restrict the processing of your personal information under certain conditions, for example, if you contest the accuracy of the data.</li>
+                <li><strong>Right to Data Portability:</strong> You have the right to receive your personal information in a structured, commonly used, and machine-readable format and to transmit that data to another controller.</li>
+                <li><strong>Right to Object:</strong> You have the right to object to the processing of your personal information for direct marketing purposes or when the processing is based on our legitimate interests.</li>
+                <li><strong>Right to Withdraw Consent:</strong> If we are relying on your consent to process your personal information, you have the right to withdraw that consent at any time. This will not affect the lawfulness of processing based on consent before its withdrawal.</li>
+                <li><strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with a supervisory authority if you believe your data protection rights have been violated.</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us using the details provided in the "Contact Us" section below. We may need to verify your identity before fulfilling your request to ensure the security of your data. We will respond to your request within the timeframes required by applicable law.</p>
+
+            <h2>8. Cookies and Tracking Technologies</h2>
+            <p>As mentioned previously, we use cookies and similar tracking technologies (like web beacons and pixels) to enhance your browsing experience, analyze site usage, and support our marketing efforts.</p>
+            <ul>
+                <li><strong>What are Cookies?</strong> Cookies are small text files placed on your device (computer, tablet, smartphone) when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the site owners.</li>
+                <li><strong>How We Use Cookies:</strong>
+                    <ul>
+                        <li><strong>Strictly Necessary Cookies:</strong> These are essential for the operation of our website, enabling core functionalities like secure login, shopping cart management, and payment processing. Without these cookies, certain services cannot be provided.</li>
+                        <li><strong>Performance/Analytical Cookies:</strong> These cookies collect information about how visitors use our website, such as which pages are visited most often, and if they get error messages from web pages. This data is aggregated and anonymous and is used to improve how our website works.</li>
+                        <li><strong>Functionality Cookies:</strong> These cookies allow our website to remember choices you make (like your language preference or region) and provide enhanced, more personal features.</li>
+                        <li><strong>Targeting/Advertising Cookies:</strong> These cookies are used to deliver advertisements more relevant to you and your interests. They are also used to limit the number of times you see an advertisement as well as help measure the effectiveness of the advertising campaign. They are usually placed by advertising networks with the website operator’s permission.</li>
+                    </ul>
+                </li>
+                <li><strong>Third-Party Cookies:</strong> We may also use third-party cookies from partners like Google Analytics, social media platforms, and advertising networks to help us analyze our website traffic, measure the effectiveness of our marketing, and serve relevant ads.</li>
+                <li><strong>Your Choices Regarding Cookies:</strong> Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. However, disabling cookies may prevent you from taking full advantage of the website. For more detailed information about how we use cookies and how you can manage your cookie preferences, please refer to our dedicated Cookies Policy page.</li>
+            </ul>
+
+            <h2>9. Children's Privacy</h2>
+            <p>PlatedPine's website and services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that we have inadvertently collected personal information from a child under 16 without verifiable parental consent, we will take steps to delete that information as quickly as possible. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us immediately.</p>
+
+            <h2>10. International Data Transfers</h2>
+            <p>PlatedPine operates globally, and your personal information may be stored and processed in countries outside of your own, including India where our headquarters are located, or in countries where our service providers operate. These countries may have data protection laws that are different from the laws of your country.</p>
+            <p>When we transfer your personal information across international borders, we take appropriate measures to ensure that your data remains protected in accordance with this Privacy Policy and applicable data protection laws. These measures may include:</p>
+            <ul>
+                <li><strong>Standard Contractual Clauses (SCCs):</strong> Implementing standard contractual clauses approved by relevant authorities (e.g., the European Commission) for data transfers.</li>
+                <li><strong>Adequacy Decisions:</strong> Relying on adequacy decisions by relevant authorities that confirm a country provides an adequate level of data protection.</li>
+                <li><strong>Binding Corporate Rules (BCRs):</strong> For intra-group transfers, if applicable.</li>
+            </ul>
+            <p>By using our website and services, you understand and agree to the transfer of your information to countries outside of your country of residence, which may have different data protection rules than those of your country.</p>
+
+            <h2>11. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will revise the "Last Updated" date at the top of this policy. If we make significant changes, we will notify you by posting a prominent notice on our website or by sending you an email (if you have provided us with your email address and opted-in to receive such notifications) prior to the changes becoming effective. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information. Your continued use of our website and services after any changes to this Privacy Policy constitutes your acceptance of the updated terms.</p>
+
+            <h2>12. Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy, our data practices, or if you wish to exercise your data protection rights, please do not hesitate to contact us. Our dedicated privacy team is here to assist you.</p>
+            <p><strong>PlatedPine Privacy Team</strong></p>
+            <p><strong>Email:</strong> privacy@platedpine.com</p>
+            <p><strong>Phone:</strong> +99 98765 43210 (Please note: This is a placeholder number for privacy inquiries)</p>
+            <p><strong>Postal Address:</strong><br>
+            PlatedPine Furniture Headquarters<br>
+            Attn: Privacy Officer<br>
+            123 Pinecrest Avenue,<br>
+            Greenwood City,<br>
+            Delhi, Delhi, 110001<br>
+            India</p>
+            <p>We are committed to resolving any complaints about our collection or use of your personal information. If you feel that we have not addressed your concerns satisfactorily, you may have the right to contact your local data protection authority.</p>
+            <p>Thank you for trusting PlatedPine with your personal information. We are dedicated to ensuring your privacy and providing you with a secure and enjoyable experience.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="cookies.html">Cookies Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Address</h4>
+                <p>PlatedPine Furniture Headquarters</p>
+                <p>123 Pinecrest Avenue,</p>
+                <p>Greenwood City,</p>
+                <p>Delhi, Delhi, 110001</p>
+                <p>India</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@platedpine.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>WhatsApp: +91 98765 43210</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <!-- Placeholder social icons. Uncomment Font Awesome link in head to display. -->
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025 PlatedPine. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

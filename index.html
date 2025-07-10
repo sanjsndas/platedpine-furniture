@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlatedPine – Nature Refined, Furniture Redefined</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #F3E9DC; /* Pinewood Beige */
+            --accent-green: #4E944F; /* Forest Pine Green */
+            --accent-gray: #B0A99F; /* Ash Gray */
+            --text-dark: #333;
+            --text-light: #666;
+            --font-sans: 'Nunito', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 2em;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        .hero {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1600x800?text=Pine+Wood+Coffee+Table') no-repeat center center/cover; /* Placeholder image */
+            filter: brightness(0.8);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #fff; /* Ensure text is visible over image */
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: #fff;
+            padding: 15px 30px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #3a7a3b;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h2, h3, h4 {
+            font-family: var(--font-serif);
+            color: var(--accent-green);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.8em;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h3 {
+            font-size: 2.2em;
+            color: var(--text-dark);
+            margin-top: 50px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 1.8em;
+            color: var(--text-dark);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .text-block {
+            padding: 20px 0;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .text-block p {
+            margin-bottom: 15px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .product-item {
+            background-color: #fdfdfd;
+            border: 1px solid var(--primary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--primary-color);
+        }
+
+        .product-item h4 {
+            font-family: var(--font-serif);
+            color: var(--accent-green);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.6em;
+            text-align: center;
+        }
+
+        .product-item p {
+            color: var(--text-light);
+            padding: 0 20px;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+
+        .product-item .shop-now {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-item .shop-now:hover {
+            background-color: #3a7a3b;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            flex: 1 1 45%;
+            background-color: #fdfdfd;
+            border: 1px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .feature-item h4 {
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .feature-item p {
+            color: var(--text-light);
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .blog-post {
+            background-color: #fdfdfd;
+            border: 1px solid var(--primary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--primary-color);
+        }
+
+        .blog-post-content {
+            padding: 20px;
+        }
+
+        .blog-post-content h4 {
+            color: var(--accent-green);
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .blog-post-content p {
+            font-size: 0.95em;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .blog-post-content a {
+            display: inline-block;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .blog-post-content a:hover {
+            color: #3a7a3b;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .list-style-none {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list-style-none li {
+            margin-bottom: 10px;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            color: var(--text-light);
+        }
+
+        .section-intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            padding: 60px 0 30px 0;
+            color: var(--text-dark);
+            font-size: 0.95em;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        footer .footer-section {
+            flex: 1 1 200px;
+            min-width: 180px;
+        }
+
+        footer h4 {
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            text-align: left; /* Override global h4 text-align */
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--accent-green);
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        footer .bottom-bar {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 10px 15px;
+            }
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            .hero-content .tagline {
+                font-size: 1.2em;
+            }
+            .cta-buttons a {
+                padding: 12px 25px;
+                margin: 10px 0;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            h3 {
+                font-size: 1.8em;
+            }
+            h4 {
+                font-size: 1.5em;
+            }
+            .product-grid, .blog-posts {
+                grid-template-columns: 1fr;
+            }
+            .feature-list {
+                flex-direction: column;
+            }
+            .feature-item {
+                flex: 1 1 100%;
+            }
+            footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            footer .footer-section {
+                margin-bottom: 20px;
+            }
+            footer h4 {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">PlatedPine</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <p class="tagline">“Nature Refined, Furniture Redefined.”</p>
+                <h1>PlatedPine – Nature Refined, Furniture Redefined.</h1>
+                <div class="cta-buttons">
+                    <a href="#product-categories">🪵 Shop Collections</a>
+                    <a href="#whats-trending">🌿 See What’s Trending</a>
+                    <a href="#made-to-order">📐 Customize a Piece</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="brand-essence" class="container">
+            <div class="section-intro">
+                <h2>Welcome to PlatedPine: Embrace the Serenity of Natural Wood</h2>
+                <p>At PlatedPine, we believe that your home should be a sanctuary—a place where tranquility meets timeless design. We are a premium, design-forward furniture brand dedicated to bringing the unparalleled simplicity and inherent beauty of natural pine wood into your modern lifestyle. Our mission is to redefine furniture, transforming it from mere utility into an extension of your personal style and a testament to conscious living. With an exquisite range of styles, from the clean lines of **Scandinavian minimalism** to the warm embrace of **rustic charm** and the thoughtful elegance of **Japandi aesthetics**, every PlatedPine piece is meticulously crafted to strike a perfect balance between **sustainability, aesthetic harmony, and daily durability**.</p>
+            </div>
+            <div class="text-block">
+                <h3>Our Brand Essence: A Commitment to Nature and Design</h3>
+                <p>PlatedPine is more than just a furniture brand; it's a philosophy. It’s about creating spaces that breathe, that tell a story, and that stand the test of time, both in resilience and relevance. We've chosen pine wood as our foundational material not only for its inherent beauty and versatility but also for its rapid renewability and light, calming presence—a refreshing alternative in a market often dominated by heavier oaks. Each piece of furniture we design and produce is a testament to our core values: a deep respect for nature, an unwavering commitment to exceptional design, and a dedication to crafting pieces that seamlessly integrate into and enhance your daily life.</p>
+                <p>Our tagline, <strong>“Nature Refined, Furniture Redefined,”</strong> encapsulates our vision. We take the raw, untamed beauty of nature and refine it through thoughtful design and masterful craftsmanship, transforming it into furniture that redefines your living experience.</p>
+            </div>
+        </section>
+
+        <section id="product-categories" class="container">
+            <h2>Explore Our Collections: Crafted for Every Corner of Your Home</h2>
+            <div class="section-intro">
+                <p>Discover the perfect piece to elevate every room. Our collections are thoughtfully curated to offer a diverse range of styles and functionalities, all unified by the distinctive charm of pine wood.</p>
+            </div>
+
+            <div class="text-block">
+                <h3>Living Room: The Heart of Your Home, Redefined</h3>
+                <p>Your living room is where life unfolds, where memories are made, and where comfort is paramount. Our living room collection is designed to foster an atmosphere of calm and connection.</p>
+                <h4>Pinewood Coffee Tables:</h4>
+                <p>From expansive, minimalist designs that anchor a room to compact, multi-functional tables perfect for smaller spaces, our coffee tables are more than just surfaces; they are focal points. Imagine a Saturday morning with your favorite book and a cup of coffee, the natural grain of the pine subtly enhancing the moment. Our Scandinavian-inspired tables feature tapered legs and clean lines, while our rustic options might showcase a beautiful live edge, celebrating the wood's organic form. Each table is treated with eco-friendly finishes that highlight, rather than obscure, the wood's inherent beauty, ensuring durability for years of family gatherings and quiet evenings.</p>
+                <h4>Modular Shelving Systems:</h4>
+                <p>Adaptability is key in modern living. Our modular shelving units offer unparalleled flexibility, allowing you to create custom storage solutions that evolve with your needs. Whether you need a display for your cherished book collection, a home for your verdant indoor plants, or discreet storage for media, our pine shelving can be configured to fit any space and purpose. Their light aesthetic prevents them from overwhelming a room, instead promoting an airy, open feel.</p>
+                <h4>Entertainment Units:</h4>
+                <p>Designed to beautifully house your media essentials while maintaining a minimalist aesthetic. Our pine entertainment units blend seamlessly into your decor, offering ample storage for electronics, cables, and more, all while exuding a natural warmth. Available in various lengths and configurations, they provide both functionality and a clean visual anchor for your living area.</p>
+                <h4>Scandinavian and Japandi Styles:</h4>
+                <p>Our living room furniture predominantly features these two harmonious styles. <strong>Scandinavian design</strong> emphasizes simplicity, functionality, and light colors, creating bright and airy spaces. Think clean lines, natural textures, and a focus on comfort. <strong>Japandi</strong>, a fusion of Japanese minimalism and Scandinavian warmth, brings a serene, uncluttered aesthetic with a strong emphasis on natural materials, muted tones, and craftsmanship. Both styles celebrate the quiet beauty of pine, allowing its natural grain and light hue to shine.</p>
+
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="p1.webp" alt="Pinewood Coffee Table">
+                        <h4>Minimalist Pine Coffee Table</h4>
+                        <p>Clean lines and natural beauty, perfect for modern living rooms.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                    <div class="product-item">
+                        <img src="p2.webp" alt="Modular Pine Shelving">
+                        <h4>Expandable Pine Shelving</h4>
+                        <p>Flexible and functional storage that adapts to your space.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                    <div class="product-item">
+                        <img src="p3.webp" alt="Pine Entertainment Unit">
+                        <h4>Japandi Media Console</h4>
+                        <p>Sleek design with ample storage for all your entertainment needs.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-block">
+                <h3>Dining: Gatherings Rooted in Natural Beauty</h3>
+                <p>The dining area is a place for connection, sharing, and nourishment. Our dining collection is crafted to facilitate memorable moments, combining robust durability with an inviting aesthetic.</p>
+                <h4>Lightwood Dining Tables:</h4>
+                <p>The centerpiece of any dining space, our pine dining tables come in a variety of shapes and sizes to suit any gathering, from intimate dinners to large family feasts. Options include classic rectangular designs, inviting round tables, and innovative expandable designs that maximize your space when needed. The light tone of the pine ensures that even larger tables maintain an open, inviting feel, making your dining area feel more spacious and less imposing.</p>
+                <h4>Benches:</h4>
+                <p>A versatile and stylish seating option that complements our dining tables beautifully. Pine benches offer a relaxed, communal feel, perfect for informal gatherings or for creating a cozy nook. They can also be tucked away easily when not in use, offering excellent space-saving benefits.</p>
+                <h4>Bar Stools:</h4>
+                <p>Elevate your kitchen island or home bar with our elegant and comfortable pine bar stools. Available in various heights and designs, they provide comfortable seating while echoing the natural aesthetic of the rest of your home.</p>
+                <h4>Expandable and Compact Designs:</h4>
+                <p>We understand the demands of modern living. Many of our dining tables feature ingenious expandable mechanisms, allowing you to easily adjust their size to accommodate guests, while our compact designs are perfect for smaller apartments or eat-in kitchens, proving that natural elegance can fit into any footprint.</p>
+
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="p4.avif" alt="Pine Dining Table">
+                        <h4>Expandable Pine Dining Table</h4>
+                        <p>Versatile table for intimate dinners or large gatherings.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                    <div class="product-item">
+                        <img src="p5.avif" alt="Pine Dining Bench">
+                        <h4>Solid Pine Dining Bench</h4>
+                        <p>Comfortable and stylish seating solution for your dining area.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                    <div class="product-item">
+                        <img src="p6.avif" alt="Pine Bar Stool">
+                        <h4>Modern Pine Bar Stool</h4>
+                        <p>Elegant design for kitchen islands and home bars.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-block">
+                <h3>Bedroom: Your Personal Retreat</h3>
+                <p>Your bedroom should be a sanctuary of peace and rest. Our bedroom collection focuses on creating a serene environment, combining minimalist design with thoughtful functionality.</p>
+                <h4>Floating Nightstands:</h4>
+                <p>Designed to maximize floor space and create a light, airy feel, our floating nightstands offer convenient storage and a clean aesthetic right where you need it. They are perfect for small bedrooms or for those who appreciate uncluttered spaces.</p>
+                <h4>Minimalist Bedframes:</h4>
+                <p>Crafted from solid pine, our bedframes provide a sturdy, quiet foundation for your mattress, promoting undisturbed sleep. Their minimalist design ensures they integrate seamlessly into any bedroom decor, from the most contemporary to the subtly rustic. Options include platform beds, which eliminate the need for a box spring, contributing to a lower profile and a more modern look.</p>
+                <h4>Wardrobes:</h4>
+                <p>Functional yet aesthetically pleasing, our pine wardrobes offer ample storage for your clothing and accessories. Designed with clean lines and intelligent interior configurations, they help keep your bedroom tidy and serene. We offer various sizes and internal layouts, including options with both hanging space and shelving, ensuring optimal organization.</p>
+                <h4>Built-in Storage Options:</h4>
+                <p>Many of our bedroom pieces, including bedframes and wardrobes, feature clever built-in storage solutions. From drawers integrated into bed bases to cleverly concealed compartments within wardrobes, we help you maximize space and maintain a clutter-free environment, essential for a truly restful bedroom.</p>
+
+                <div class="product-grid">
+                    <div class="product-item">
+                        <h4>Minimalist Floating Nightstand</h4>
+                        <p>Space-saving design for a serene bedroom aesthetic.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                    <div class="product-item">
+                        <h4>Scandinavian Pine Bedframe</h4>
+                        <p>Sturdy and stylish foundation for peaceful sleep.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                    <div class="product-item">
+                        <h4>Pine Wardrobe with Built-in Storage</h4>
+                        <p>Elegant storage solution to keep your bedroom clutter-free.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-block">
+                <h3>Workspace: Inspire Productivity, Naturally</h3>
+                <p>Create an inspiring and productive environment with our collection of pine workspace furniture, designed to blend functionality with a calming aesthetic.</p>
+                <h4>Pine Desks:</h4>
+                <p>From spacious executive desks to compact writing tables, our pine desks offer sturdy, smooth surfaces for all your work needs. Their natural wood finish brings an element of warmth and calm to your home office, promoting focus and creativity. We offer desks with integrated storage, cable management solutions, and varying footprints to suit different room sizes and work styles.</p>
+                <h4>Ergonomic Chairs:</h4>
+                <p>While our primary focus is on wood furniture, we partner with select manufacturers to offer ergonomic chairs that complement our pine desks beautifully. These chairs are chosen for their comfort, support, and aesthetic alignment with our brand's natural, modern ethos, ensuring your workspace is not only beautiful but also promotes well-being.</p>
+                <h4>Floating Bookshelves:</h4>
+                <p>Maximize vertical space and display your literary treasures or decorative items with our elegant floating bookshelves. Their minimalist design makes them appear to float on the wall, adding a touch of modern sophistication while providing practical storage. Crafted from the same high-quality pine, they seamlessly integrate with our desks and other workspace furniture.</p>
+
+                <div class="product-grid">
+                    <div class="product-item">
+                        <h4>Minimalist Pine Desk</h4>
+                        <p>Inspiring workspace for focus and creativity.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                    <div class="product-item">
+                        <h4>Pine Floating Bookshelf</h4>
+                        <p>Elegant display and storage, maximizing your wall space.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                    <div class="product-item">
+                        <h4>Ergonomic Office Chair</h4>
+                        <p>Comfort and support, designed to complement your pine workspace.</p>
+                        <a href="#" class="shop-now">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-block" id="made-to-order">
+                <h3>Made-to-Order: Your Vision, Our Craftsmanship</h3>
+                <p>At PlatedPine, we understand that every home is unique. Our Made-to-Order service allows you to customize key aspects of your furniture, ensuring it perfectly fits your space and personal style. This bespoke experience brings your vision to life, handcrafted with the same dedication and quality as all our standard pieces.</p>
+                <h4>Customers Choose Dimensions:</h4>
+                <p>Have an awkward nook or a specific wall you want to fill? Need a longer dining table or a narrower desk? Our Made-to-Order service allows you to specify precise dimensions for select furniture pieces, ensuring a perfect fit for your unique space. This eliminates the frustration of trying to find off-the-shelf furniture that doesn't quite work.</p>
+                <h4>Finish:</h4>
+                <p>Select from our curated palette of eco-friendly finishes that enhance the natural beauty of pine:</p>
+                <ul class="list-style-none">
+                    <li><strong>Light Natural:</strong> Highlights the inherent pale, creamy tone of pine, creating a bright and airy feel. Ideal for minimalist and Scandinavian interiors.</li>
+                    <li><strong>Antique Pine:</strong> A warm, slightly richer tone that brings out the character of the wood, offering a timeless, cozy appeal. Perfect for rustic and traditional settings.</li>
+                    <li><strong>Weathered Gray:</strong> A sophisticated, muted gray wash that gives the pine an aged, distressed look, offering a contemporary farmhouse or industrial aesthetic.</li>
+                    <li><strong>Whitewash:</strong> A translucent white finish that allows the wood grain to subtly show through, brightening a space and creating a fresh, coastal, or shabby-chic vibe.</li>
+                </ul>
+                <h4>Edge Style:</h4>
+                <p>The edge of your furniture can dramatically change its character:</p>
+                <ul class="list-style-none">
+                    <li><strong>Raw/Live Edge:</strong> Celebrates the organic, untamed beauty of the wood, retaining the natural contours of the tree. Each live edge piece is truly unique, showcasing nature's artistry. Ideal for rustic or industrial-chic designs, bringing a touch of the outdoors in.</li>
+                    <li><strong>Smooth:</strong> A classic, clean, and refined edge, meticulously sanded for a sleek and polished look. Perfect for minimalist, Scandinavian, and contemporary designs where clean lines are paramount.</li>
+                    <li><strong>Beveled:</strong> A subtly angled edge that adds a touch of sophistication and visual interest, softening the lines of the furniture. This elegant detail provides a refined finish suitable for both modern and traditional interiors.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sustainability" class="container">
+            <h2>Our Sustainability Promise: Furniture with a Conscience</h2>
+            <div class="section-intro">
+                <p>At PlatedPine, our commitment to nature extends far beyond the beauty of our wood. Sustainability is not just a buzzword for us; it's ingrained in every step of our process, from sourcing to packaging. We believe that beautiful furniture should not come at the cost of our planet.</p>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>FSC-Certified Pinewood</h4>
+                    <p>We exclusively source our pine wood from forests certified by the Forest Stewardship Council (FSC). This certification ensures that our wood comes from responsibly managed forests that provide environmental, social, and economic benefits. This means the forests are managed in a way that preserves biological diversity and benefits the lives of local people and workers, while ensuring that the harvesting does not threaten forest health for future generations.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Eco-Friendly Stains and Polishes</h4>
+                    <p>We utilize only low-VOC (Volatile Organic Compound) and non-toxic stains and polishes. These environmentally conscious finishes protect the wood, enhance its natural beauty, and are safe for your home and the planet. Unlike traditional finishes that can release harmful chemicals into the air, ours contribute to healthier indoor air quality, ensuring your furniture is as good for your family as it is for the environment.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Recyclable Packaging</h4>
+                    <p>We are constantly striving to minimize our environmental footprint. All our packaging materials are chosen with recyclability in mind, reducing waste and promoting a circular economy. From recycled cardboard to biodegradable packing peanuts, we ensure that the journey of your furniture to your home is as green as possible.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Plant-a-Tree Pledge with Every Order</h4>
+                    <p>For every piece of PlatedPine furniture purchased, we pledge to plant a tree in partnership with reputable reforestation organizations. This initiative is our way of giving back to nature, actively contributing to forest restoration, combating climate change, and ensuring that for every tree used, more are planted, creating a positive ecological impact. We invite you to be a part of this meaningful endeavor with every purchase.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="custom-features" class="container">
+            <h2>Innovative Features & Tools: Design Your Dream Space</h2>
+            <div class="section-intro">
+                <p>We’ve integrated advanced tools and features into our website to empower you in your design journey, making it easier than ever to visualize, customize, and track your PlatedPine furniture.</p>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>Room Visualizer Tool</h4>
+                    <p>Imagine your new pine coffee table perfectly placed in your living room, or a minimalist bedframe transforming your bedroom. Our intuitive Room Visualizer Tool allows you to upload a photo of your own room and virtually place PlatedPine furniture pieces within it. Adjust sizes, rotate items, and see how different pieces look in your actual space before you buy. This takes the guesswork out of online furniture shopping, ensuring confidence in your selections.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Finish Swatch Preview</h4>
+                    <p>Choosing the right finish is crucial. Our interactive Finish Swatch Preview allows you to see how different finishes—Light Natural, Antique Pine, Weathered Gray, and Whitewash—appear on various furniture types. This digital tool provides a realistic representation of the texture and tone, helping you select the perfect finish that complements your existing decor and personal aesthetic.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Live Craft Tracker</h4>
+                    <p>From the moment you place your custom order, you can follow its journey with our Live Craft Tracker. This unique feature provides real-time updates as your furniture moves through each stage of production: <strong>“Crafted”</strong> (your raw timber is being precisely cut and shaped); <strong>“Polished”</strong> (the wood is undergoing meticulous sanding, finishing, and application of your chosen eco-friendly stain or polish); <strong>“Packed”</strong> (your completed piece is being carefully prepared and securely packaged); <strong>“Shipped”</strong> (your furniture is on its way to your home, with tracking information provided). This transparency ensures you’re always informed and connected to the creation of your unique piece.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="container">
+            <h2>Gallery: Styled by PlatedPine – Real Homes, Real Inspiration</h2>
+            <div class="section-intro">
+                <p>Get inspired by how PlatedPine furniture transforms real homes. Our gallery showcases stunning real home setups featuring our pieces, offering practical styling ideas and a deeper look at the beauty of pine.</p>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>Real Home Setups with Tagged Products</h4>
+                    <p>Browse a curated collection of photographs submitted by our satisfied customers and professional interior designers. Each image tags the specific PlatedPine products featured, making it easy for you to identify and shop the look you love. See how our furniture fits into diverse aesthetics, from cozy apartments to spacious family homes.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Interior Design Collabs and Pine Styling Ideas</h4>
+                    <p>We collaborate with leading interior designers to bring you fresh perspectives on styling with pine. Explore articles and visual guides on how to incorporate light wood furniture into various design schemes, from bohemian chic to urban industrial. Discover tips on pairing pine with different textures, colors, and lighting to create harmonious and inviting spaces.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>“Pine at a Glance” Wood Grain Showcase</h4>
+                    <p>The beauty of natural wood lies in its unique grain patterns. Our “Pine at a Glance” section offers high-resolution close-ups of various pine wood grains, showcasing the subtle knots, lines, and textures that make each piece of PlatedPine furniture distinct. Understand the characteristics of quality pine and appreciate the natural artistry that goes into every item we craft.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="container">
+            <h2>Blog: The Softwood Standard – Insights and Inspirations</h2>
+            <div class="section-intro">
+                <p>Our blog, "The Softwood Standard," is your go-to resource for all things pine furniture, interior design, and sustainable living. We aim to inform, inspire, and educate, helping you make the most of your PlatedPine pieces and create a home that truly reflects your mindful lifestyle.</p>
+            </div>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <div class="blog-post-content">
+                        <h4>Why Pinewood Is Perfect for Modern Homes</h4>
+                        <p>Delve into the unique benefits of pine. This article explores its lightweight nature, durability, versatility in various design styles, and its sustainable advantages, explaining why it's an ideal choice for contemporary interiors seeking a touch of natural warmth without the heaviness of traditional woods.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-content">
+                        <h4>Scandi vs. Rustic: Finding Your Pine Personality</h4>
+                        <p>A deep dive into two of our signature styles. This post helps you understand the nuances between Scandinavian minimalism and rustic charm, guiding you to discover which aesthetic resonates most with your personal taste and how PlatedPine furniture can help you achieve that look.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-content">
+                        <h4>How to Style Light Wood in Any Room</h4>
+                        <p>From living rooms to bedrooms, and even bathrooms, this comprehensive guide offers practical tips and visual examples on how to seamlessly integrate light wood furniture into any space. Learn about color palettes, complementary textures, and lighting techniques that enhance the beauty of pine.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-content">
+                        <h4>Furniture That Ages With Grace</h4>
+                        <p>Explore the enduring quality of pine furniture and how it develops a unique patina over time. This article discusses the natural aging process of wood, offering insights into how to care for your pieces to ensure they not only last for decades but also become more beautiful and characterful with each passing year, telling the story of your home.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="extras-services" class="container">
+            <h2>Extras & Services: Enhancing Your PlatedPine Experience</h2>
+            <div class="section-intro">
+                <p>We go the extra mile to ensure your experience with PlatedPine is seamless and delightful, from the moment you consider a purchase to years after your furniture has become a cherished part of your home.</p>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>Free Wood Finish Samples</h4>
+                    <p>We understand the importance of tactile experience. Order free physical samples of our Light Natural, Antique Pine, Weathered Gray, and Whitewash finishes to see and feel the textures and tones in your own home lighting, ensuring you make the perfect choice for your space.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Custom Name Engraving for Beds/Desks</h4>
+                    <p>Add a personal touch to your furniture. For selected bedframes and desks, we offer custom name engraving, making your piece truly unique and a cherished heirloom for generations to come. This bespoke service adds sentimental value, perfect for gifts or for making a statement in a child's room or home office.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Assembly Videos and Live Install Chat</h4>
+                    <p>We’ve made assembly as straightforward as possible. Our detailed, easy-to-follow assembly videos provide step-by-step visual guidance for setting up your furniture. For any questions or assistance during installation, our Live Install Chat connects you instantly with our expert support team who can guide you through the process in real-time, ensuring a stress-free setup.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Care Kit: Beeswax Polish + Microfiber Cloth Included</h4>
+                    <p>To help you maintain the beauty and longevity of your PlatedPine furniture, every order includes a complimentary care kit. This kit features a specially formulated beeswax polish that nourishes and protects the wood, enhancing its natural luster, along with a soft microfiber cloth for gentle application and daily dusting.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="customer-experience" class="container">
+            <h2>Customer Experience: Your Satisfaction, Our Priority</h2>
+            <div class="section-intro">
+                <p>At PlatedPine, we are dedicated to providing an exceptional customer experience that is as refined and reliable as our furniture. Your satisfaction is the cornerstone of our business, and we strive to offer support and services that exceed expectations.</p>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>Soft-Tone WhatsApp + Email Support</h4>
+                    <p>Our customer support team is available to assist you with any inquiries, from product details to order tracking, via WhatsApp and email. We pride ourselves on providing prompt, courteous, and helpful responses, ensuring your questions are answered efficiently and your concerns are addressed with care. Our soft-tone approach ensures a friendly and approachable interaction every time.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Home Visit + Free Design Consult for Premium Buyers</h4>
+                    <p>For our premium buyers investing in larger custom pieces or multiple items, we offer an exclusive service: a free home visit and design consultation. Our experienced design consultants will visit your space, understand your vision, take precise measurements, and offer personalized recommendations to ensure your PlatedPine furniture integrates perfectly and enhances your home's aesthetic. This bespoke service ensures a truly tailored experience.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Furniture Care Guarantee: 10-Year Structural Warranty</h4>
+                    <p>We stand behind the quality and durability of our craftsmanship. All PlatedPine furniture comes with a comprehensive 10-year structural warranty. This guarantee covers any defects in materials or workmanship under normal household use, providing you with peace of mind and demonstrating our confidence in the lasting quality of our products. We are committed to ensuring your PlatedPine pieces remain beautiful and functional for a decade and beyond.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-stand-out" class="container">
+            <h2>Why PlatedPine Furniture Stands Out: Our Unique Advantage</h2>
+            <div class="section-intro">
+                <p>In a crowded furniture market, PlatedPine distinguishes itself through a unique blend of material choice, design philosophy, and unwavering commitment to customer satisfaction and sustainability.</p>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>Light, Calming Pine Aesthetic — Rare in an Oak-Heavy Market</h4>
+                    <p>While oak dominates much of the premium furniture landscape with its darker tones and heavier feel, PlatedPine champions the inherent beauty and unique advantages of pine. Our use of pine results in furniture that is lighter in aesthetic, contributing to a more open, airy, and calming atmosphere in your home. This fresh approach offers a refreshing alternative for those seeking modern serenity and a connection to nature without the visual weight.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Combines Scandinavian Simplicity with Indian Craftsmanship</h4>
+                    <p>Our furniture embodies a harmonious fusion. We draw inspiration from the clean lines, functional design, and minimalist principles of Scandinavian aesthetics, renowned for their ability to create inviting and uncluttered spaces. This design sensibility is then brought to life by the unparalleled skill and intricate detail of traditional Indian craftsmanship. This blend results in furniture that is not only visually stunning and globally appealing but also built with generations of artisanal expertise, ensuring exceptional quality and durability.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Premium Feel Without Heavy Prices</h4>
+                    <p>We believe that exceptional design and sustainable materials should be accessible. PlatedPine furniture offers a premium look and feel, characterized by meticulous finishing, thoughtful details, and high-quality construction, all without the prohibitive price tags often associated with high-end furniture. By streamlining our processes and focusing on efficient, responsible sourcing, we deliver superior value directly to our customers, allowing more people to experience the luxury of natural wood furniture.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Customization Made Accessible and Visual</h4>
+                    <p>Gone are the days of limited choices and opaque customization processes. Our innovative online tools, such as the Room Visualizer and Finish Swatch Preview, make customization intuitive and enjoyable. You can visualize your choices in your own space, experimenting with dimensions, finishes, and edge styles with unprecedented ease. This empowers you to create truly bespoke pieces that perfectly match your vision, ensuring your furniture is uniquely yours.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Ideal for Modern Homes, Airbnb Setups, and Mindful Interiors</h4>
+                    <p>PlatedPine furniture is inherently versatile and adaptable, making it an ideal choice for a diverse range of environments. Its clean lines and light aesthetic seamlessly integrate into <strong>modern homes</strong>, enhancing contemporary design schemes. For <strong>Airbnb setups</strong> and other rental properties, our durable, stylish, and easy-to-maintain pieces provide a premium feel that appeals to guests, elevating the overall experience. Furthermore, for those cultivating <strong>mindful interiors</strong>—spaces designed for peace, clarity, and well-being—the natural, calming presence of pine wood furniture aligns perfectly, promoting a sense of serenity and connection to nature. Our furniture doesn't just fill a space; it transforms it into a haven.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="disclaimer" class="container">
+            <h2>Disclaimer</h2>
+            <div class="text-block">
+                <p>This website, PlatedPine (www.platedpine.com), is provided for informational and e-commerce purposes only. While we strive to ensure the accuracy, completeness, and reliability of the information presented on this site, including product descriptions, images, pricing, and availability, we cannot guarantee that all information is entirely error-free or current at all times. Product specifications, colors, and dimensions may vary slightly from their appearance on your screen due to variations in monitor calibration, natural wood characteristics (such as grain patterns, knots, and color variations inherent in natural pine wood), and ongoing product improvements. We reserve the right to make changes, corrections, or updates to any information on the site without prior notice.</p>
+                <p>All content, including text, images, graphics, logos, and designs, is the property of PlatedPine or its content suppliers and is protected by international copyright laws. Any unauthorized use, reproduction, modification, distribution, transmission, or display of the content on this website is strictly prohibited. Trademarks, service marks, and trade names are proprietary to PlatedPine.</p>
+                <p>The pricing and availability of all products displayed on this website are subject to change without notice. In the event of a pricing error, PlatedPine reserves the right to cancel any orders placed at the incorrect price, even if the order has been confirmed and your credit card charged. If your credit card has already been charged for the purchase and your order is cancelled, PlatedPine will issue a credit to your credit card account in the amount of the incorrect price.</p>
+                <p>PlatedPine is not responsible for any direct, indirect, incidental, consequential, or punitive damages arising from your access to, use of, or inability to use this website, or any errors or omissions in the content thereof. This includes, but is not limited to, damages to computer equipment or any viruses that may infect your computer equipment or other property on account of your access to, use of, or Browse of this website or your downloading of any materials, data, text, images, video, or audio from this website.</p>
+                <p>Links to third-party websites are provided solely for your convenience. PlatedPine has no control over the content of these external sites and does not endorse or make any representations about them. Accessing any third-party websites linked to this site is done entirely at your own risk. We encourage you to review the terms and conditions and privacy policies of any third-party websites you visit.</p>
+                <p>Our sustainability claims, including FSC-certification, eco-friendly finishes, recyclable packaging, and our plant-a-tree pledge, are based on certifications from reputable third-party organizations and our internal policies. While we strive for maximum environmental responsibility, these claims are subject to the standards and limitations of said certifications and current industry best practices.</p>
+                <p>By using this website, you agree to these terms and conditions. If you do not agree to these terms, please do not use this site. We advise all customers to thoroughly read our Privacy Policy, Terms and Conditions, and Cookies Policy for a complete understanding of our practices.</p>
+            </div>
+        </section>
+
+        <section id="customer-satisfaction" class="container">
+            <h2>Customer Satisfaction: Our Enduring Promise</h2>
+            <div class="text-block">
+                <p>At PlatedPine, your satisfaction is not just a goal; it's the very foundation of our brand. We are profoundly committed to ensuring that every interaction you have with us, from Browse our collections to enjoying our furniture in your home, is nothing short of exceptional. We believe that true customer satisfaction stems from a blend of superior product quality, transparent communication, and genuine care.</p>
+                <p>Our dedication begins with the meticulous craftsmanship of each piece. We select only the finest FSC-certified pinewood, employing skilled artisans who infuse every table, bedframe, and shelf with precision and passion. We stand by the durability and beauty of our furniture, evident in our comprehensive 10-year structural warranty, designed to provide you with long-term peace of mind. This warranty is our promise that your investment in PlatedPine furniture is a lasting one, built to withstand the rigors of daily life and to age gracefully alongside your family.</p>
+                <p>Beyond the product, our customer service ethos is rooted in empathy and responsiveness. We understand that purchasing furniture is a significant decision, and you may have questions, need guidance, or require support. Our soft-tone WhatsApp and email support channels are staffed by knowledgeable and friendly professionals, ready to assist you promptly and courteously. For our valued premium buyers, the option of a free home visit and design consult underscores our commitment to personalized service, ensuring your furniture seamlessly integrates into your unique living space.</p>
+                <p>We continuously strive to enhance your experience through innovative tools like our Room Visualizer and Live Craft Tracker, empowering you with information and control throughout your purchasing journey. We listen to your feedback, adapt, and evolve our services to meet your needs, always with the aim of exceeding your expectations.</p>
+                <p>Ultimately, your delight when your PlatedPine furniture arrives, and the enduring comfort and beauty it brings to your home, is our greatest reward. We are not just selling furniture; we are fostering relationships and helping you create spaces that truly nourish your life. Thank you for choosing PlatedPine, where nature is refined and your satisfaction is redefined.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="cookies.html">Cookies Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Address</h4>
+                <p>PlatedPine Furniture Headquarters</p>
+                <p>123 Pinecrest Avenue,</p>
+                <p>Greenwood City,</p>
+                <p>Delhi, Delhi, 110001</p>
+                <p>India</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@platedpine.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>WhatsApp: +91 98765 43210</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025 PlatedPine. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
